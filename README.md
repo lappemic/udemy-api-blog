@@ -18,8 +18,8 @@ To set up the project locally:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/[YourUsername]/blog-post-api.git
-cd blog-post-api
+git clone https://github.com/lappemic/udemy-api-blog.git
+cd udemy-api-blog
 ```
 
 2. Install the dependencies:
