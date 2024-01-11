@@ -1,50 +1,69 @@
-# REST API for blog posts
+# Blog Post API
 
 ## Description
 
-This project is a simple REST API built with Express.js, showcasing various endpoints to manipulate a blog collection. It features endpoints to GET all posts, POST new jokes, PATCH and DELETE existing posts. The project serves as a hands-on experience in building and testing REST APIs.
+This blog post API, built with Express.js, serves as a backend for managing blog posts, including creating, reading, updating, and deleting entries. The project showcases the development of a RESTful API and interaction with it through a front-end interface, demonstrating CRUD operations on an in-memory data store.
 
 ## Key Learnings
 
-- **REST API Development**: Developed skills in creating RESTful endpoints using Express.js.
-- **CRUD Operations**: Practiced implementing Create, Read, Update, and Delete (CRUD) operations in a REST API.
-- **Data Filtering**: Implemented query parameters to filter jokes based on type.
-- **Testing with Postman**: Gained experience in testing API endpoints and handling requests and responses using Postman.
-- **JavaScript and Node.js**: Enhanced understanding of server-side JavaScript programming and Node.js capabilities.
+- **RESTful API Development**: Mastered designing and implementing RESTful APIs using Express.js.
+- **CRUD Operations**: Implemented Create, Read, Update, and Delete operations.
+- **EJS Templating**: Utilized EJS for dynamic HTML content rendering.
+- **Express.js and Body Parsing**: Leveraged Express.js and `body-parser` middleware for request handling and parsing.
 
 ## Installation
 
-Clone the repository:
+To set up the project locally:
+
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/lappemic/udemy-build-restapi.git
-cd udemy-build-restapi
+git clone https://github.com/[YourUsername]/blog-post-api.git
+cd blog-post-api
+```
+
+2. Install the dependencies:
+
+```bash
 npm install
 ```
 
-## Usage
+## Running the Project
 
-Start the server:
-
-```bash
-node index.js
-```
-
-or using nodemon:
+1. Start the API server (index.js):
 
 ```bash
 nodemon index.js
 ```
 
-Navigate to http://localhost:3000 to interact with the API.
+This starts the backend server on http://localhost:4000.
+
+2. In a new terminal, start the front-end server (server.js):
+
+```bash
+nodemon server.js
+```
+
+This starts the front-end server on http://localhost:3000.
+
+3. Open a web browser and go to http://localhost:3000 to interact with the application.
 
 ## API Endpoints
 
-- GET /random: Fetch a random joke.
-- GET /jokes/:id: Fetch a specific joke by ID.
-- GET /filter: Fetch jokes filtered by type.
-- POST /jokes: Add a new joke.
-- PUT /jokes/:id: Update an existing joke.
-- PATCH /jokes/:id: Partially update an existing joke.
-- DELETE /jokes/:id: Delete a specific joke.
-- DELETE /all: Delete all jokes (restricted access).
+- GET /posts: Retrieve all blog posts.
+- GET /posts/:id: Retrieve a specific post by ID.
+- POST /posts: Create a new blog post.
+- PATCH /posts/:id: Update a specific post by ID.
+- DELETE /posts/:id: Delete a specific post by ID.
+- DELETE /all: Delete all posts (restricted access).
+
+## Project Structure
+
+- index.js: Main server file for the API with route definitions.
+- server.js: Backend server for handling front-end requests.
+- views/: EJS templates for rendering the blog interface.
+- public/: Static files for styling.
+
+```
+
+```
